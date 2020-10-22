@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right-heel,#left-heel{
+  animation: heel 1s ease infinite ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#man-bike{
+  position: relative;
+  animation: bike 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  z-index: 1;
+}
+#head{
+  position: absolute;
+  z-index: 23330;
+  animation: heat 1s ease-in-out infinite alternate; 
+  transform-origin: top;
+}
+
+@keyframes bike{
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(20deg);
+  }
+}
+
+@keyframes heel{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes heat{
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(3%);
+  }
+}
